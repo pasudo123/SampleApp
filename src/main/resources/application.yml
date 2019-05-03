@@ -1,0 +1,20 @@
+
+# database
+spring:
+datasource:
+url: jdbc:mysql://localhost:3306/db_example?useSSL=false&serverTimezone=Asia/Seoul
+username: qkrtjdehd123
+password: rootpass
+
+
+---
+spring:
+jpa:
+database: mysql
+hibernate:
+ddl-auto: create-drop
+
+show-sql: true
+properties:
+hibernate:
+format_sql: true

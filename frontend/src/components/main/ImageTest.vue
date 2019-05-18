@@ -1,8 +1,6 @@
 <template>
     <div class="test-wrapper">
 
-        <router-link to="/test">테스트 뷰로 가기</router-link>
-        <br><br><br>
         <h2>Image File Upload Test-View</h2>
 
         <div class="imageUpload-wrapper">

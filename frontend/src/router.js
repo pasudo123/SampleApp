@@ -7,8 +7,9 @@ import Comment from './components/comment/Comment.vue'
 import Test from './components/main/Test.vue'
 import ImageTest from './components/main/ImageTest.vue'
 import PositionTest from './components/main/PositionTest.vue'
+import ServerSentEventsTest from './components/main/ServerSentEventsTest.vue'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
 
@@ -30,23 +31,26 @@ export default new Router({
         {
             path: '/test',
             name: 'test',
-            component: Test
+            component: Test,
+            children: [
+                {
+                    path: '/image_test',
+                    name: 'image-test',
+                    component: ImageTest
+                },
+                {
+                    path: '/position_test',
+                    name: 'position-test',
+                    component: PositionTest
+                },
+                {
+                    path: '/sse_test',
+                    name: 'sse-test',
+                    component: ServerSentEventsTest
+                }
+
+            ]
         },
-        {
-            path: '/image_test',
-            name: 'image-test',
-            component: ImageTest
-        },
-        {
-            path: '/position_test',
-            name: 'position-test',
-            component: PositionTest,
-            scrollBehavior(to, from, savePositions){
-                console.log(to);
-                console.log(from);
-                console.log(savePositions);
-            }
-        }
 
     ]
 })

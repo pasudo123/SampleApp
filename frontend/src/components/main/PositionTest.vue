@@ -1,8 +1,6 @@
 <template>
     <div class="test-wrapper">
 
-        <router-link to="/test">테스트 뷰로 가기</router-link>
-        <br><br><br>
         <h2>Scroll And Position Test-View</h2>
 
         <div class="position-wrapper">
@@ -36,8 +34,6 @@
 
 <script>
 
-    let intervalColorBlock = null;
-
     export default {
         name: "PositionTest",
         data() {
@@ -58,8 +54,8 @@
 
                 for (let i = 0; i < number; i++) {
                     this.items[i] = {};
-                    this.items[i].number = (i + 1);
-                    this.items[i].message = "안녕하세요_" + (i + 1);
+                    this.items[i].number = (i);
+                    this.items[i].message = "안녕하세요_" + (i);
                 }
             },
 
